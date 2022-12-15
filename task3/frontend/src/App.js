@@ -6,14 +6,16 @@ import { v4 as uuidv4 } from "uuid";
 import { useEffect, useState } from "react";
 
 export default function App() {
-  const [todoList, settodoList] = useState([]);
+  const [todoList, setTodoList] = useState([]);
 
   const existingTodo = async () => {
     const data = await fetch("http://localhost:3001/users");
+    // console.log("fetching");
     const response = await data.json();
-    settodoList(response);
+    setTodoList(response);
   };
 
+  // fetches once when the component mounts
   useEffect(() => {
     existingTodo();
   }, []);
@@ -23,15 +25,16 @@ export default function App() {
       id: uuidv4(),
       content: task,
     };
-    const response = await fetch("http://localhost:3001/uses", {
-      method: 'POST',
+    const response = await fetch("http://localhost:3001/users", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(todo) 
+      body: JSON.stringify(todo),
     });
-    const data = await response.json()
-    settodoList(data);
+    const data = await response.json();
+    const newArray = [data, ...todoList];
+    setTodoList(newArray);
   };
 
   return (

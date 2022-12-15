@@ -1,6 +1,6 @@
 import { useState } from "react";
-function Input({ props }) {
-  const handleSubmit = props;
+function Input({ handleSubmit }) {
+  // const handleSubmit = props;
   const [value, setValue] = useState("");
 
   return (
