@@ -8,11 +8,10 @@ function square(num) {
 }
 
 function multiply(a, b) {
-   a * b;
+  return a * b;
 }
 
 function add(a, b) {
-  a = String(a);
   return a + b;
 }
 
@@ -24,14 +23,12 @@ function calc(numA, numB) {
 
   let answer = add(numA, numB) + 1;
   if (correctAnswer === answer) {
-    return (`Correct answer! You fixed all the bugs. Well done`);
+    return `Correct answer! You fixed all the bugs. Well done`;
   } else {
-    return (`${answer} is incorrect! The code still has bugs`);
+    return `${answer} is incorrect! The code still has bugs`;
   }
-  
 }
 
 /* DO NOT CHANGE THE CODE BELOW */
-calc(2, 4)
-module.exports= { calc}
-
+calc(2, 4);
+module.exports = { calc };
