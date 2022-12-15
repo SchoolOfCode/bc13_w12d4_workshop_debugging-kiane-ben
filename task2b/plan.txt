@@ -1,0 +1,43 @@
+****PLAN****
+
+1. Identify the bug
+2. Does the app function with the bug or is it an isolated issue
+3. Got through each failing test 
+4. Add a breask point for each function that fails
+5. Step through and make sure that each returns what we're expecting
+6. For thoes that aren't, fix the bug
+
+**** ERRORS ****
+
+  ✕ The add function should return 7 (5 ms)
+  ✕ The multiply function should return 50 (4 ms)
+  ✕ The hasPets function should return (henry ford really does have a nice pet) (1 ms)
+  ✕ The hasPets function should return (henry ford has no pets) (2 ms)
+  ✕ The balance of account1 and account2 should return 156 (3 ms)
+  ✕ The Calculator should return 4 (1 ms)
+  ✕ The Calculator should return 2 (12 ms)
+  ✕ The Calculator should return 12 (1 ms)
+  ✕ The Calculator should return 5 (2 ms)
+
+
+
+
+
+1. Identify
+2. Establish Security
+    1. Isolate the error
+    2. Create a branch before you make changes
+3. Plan and communicate
+    1. Make sure people know about the error
+4. Conduct primary survey
+    1. Replication the user experience
+    2. Screenshot
+    3. Log What the issue is
+    4. Communicate to your team
+5. Document and process
+    1. Go back to the issue and make sure it documented
+6. Conduct second survey
+    1. Make some changes and check for errors again 
+    2. Make sure to log what changes were made and the errors that came up
+7. Record and preserve 
+    1. Document the whole process so that the error doesn’t happen again
